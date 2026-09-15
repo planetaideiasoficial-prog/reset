@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resets de impressora Epson — Planeta Ideias</title>
+<meta name="description" content="Downloads dos resets Epson L3110, L3150, L120, L130, L220, L310, L360 e L365.">
+
+<!-- COLOQUE AQUI A IMAGEM DE FAVICON (o planetinha do site) -->
+<link rel="icon" href="COLOQUE AQUI A IMAGEM DE FAVICON">
+
+<style>
+  :root{
+    --tinta:#10131c;
+    --papel:#f2f3f7;
+    --papel-2:#e4e6ee;
+    --ciano:#00a3c4;
+    --magenta:#d81b7a;
+    --amarelo:#f2b705;
+    --texto:#2a2f3d;
+    --borda:#c9cddb;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--papel);
+    color:var(--texto);
+    font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+  }
+  .faixa-tinta{
+    height:6px;
+    background:linear-gradient(90deg,var(--ciano) 0 25%,var(--magenta) 25% 50%,var(--amarelo) 50% 75%,var(--tinta) 75% 100%);
+  }
+  .container{
+    max-width:880px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+  header.topo{
+    background:var(--tinta);
+    color:#fff;
+    padding:48px 0 44px;
+  }
+  header.topo h1{
+    margin:0 0 18px;
+    font-size:clamp(28px,5vw,42px);
+    line-height:1.15;
+    font-weight:700;
+    letter-spacing:-.02em;
+  }
+  header.topo p{
+    margin:0 0 14px;
+    color:#c3c9dc;
+    max-width:62ch;
+  }
+  header.topo strong{color:#fff;}
+
+  section{padding:52px 0;}
+  section + section{border-top:1px solid var(--borda);}
+  h2{
+    font-size:clamp(22px,3.6vw,30px);
+    margin:0 0 8px;
+    color:var(--tinta);
+    letter-spacing:-.01em;
+  }
+  .sub{margin:0 0 28px;color:#5c6478;max-width:62ch;}
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:14px 22px;
+    border-radius:4px;
+    text-decoration:none;
+    font-weight:600;
+    border:2px solid var(--tinta);
+    background:var(--tinta);
+    color:#fff;
+    transition:transform .12s ease, background .12s ease, color .12s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn:focus-visible{outline:3px solid var(--ciano);outline-offset:3px;}
+  .btn-vazado{background:transparent;color:var(--tinta);}
+  .btn-vazado:hover{background:var(--tinta);color:#fff;}
+
+  .doacoes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:24px;
+  }
+  .doacoes .btn{
+    background:var(--ciano);
+    border-color:var(--ciano);
+    color:#06222a;
+  }
+  .doacoes .btn:hover{background:#00b9e0;border-color:#00b9e0;}
+  .doacoes .btn.outro{
+    background:transparent;
+    color:#fff;
+    border-color:#5a6480;
+  }
+  .doacoes .btn.outro:hover{border-color:#fff;background:transparent;}
+  .obrigado{
+    margin-top:26px;
+    font-size:15px;
+    color:#8e97b0;
+  }
+
+  .resets{
+    list-style:none;
+    margin:0;
+    padding:0;
+    border-top:1px solid var(--borda);
+  }
+  .resets li{border-bottom:1px solid var(--borda);}
+  .resets a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:20px 4px;
+    text-decoration:none;
+    color:var(--tinta);
+    font-weight:600;
+    font-size:19px;
+    transition:padding-left .14s ease,color .14s ease;
+  }
+  .resets a:hover{padding-left:12px;color:var(--magenta);}
+  .resets a:focus-visible{outline:3px solid var(--ciano);outline-offset:-3px;}
+  .baixar{
+    font-size:14px;
+    font-weight:600;
+    color:#6b7488;
+    white-space:nowrap;
+  }
+
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:32px;
+  }
+  .card img{
+    width:100%;
+    height:auto;
+    display:block;
+    border:1px solid var(--borda);
+    background:var(--papel-2);
+  }
+  .card h3{
+    font-size:19px;
+    margin:18px 0 8px;
+    color:var(--tinta);
+  }
+  .card p{margin:0 0 14px;font-size:16px;}
+  .card ul{margin:0 0 18px;padding-left:20px;font-size:16px;}
+  .card li{margin-bottom:6px;}
+
+  .banners{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+    align-items:start;
+  }
+  .banners a{display:block;}
+  .banners img{
+    width:100%;
+    height:auto;
+    display:block;
+    border:1px solid var(--borda);
+    background:var(--papel-2);
+  }
+
+  footer{
+    background:var(--tinta);
+    color:#8e97b0;
+    padding:34px 0;
+    font-size:15px;
+  }
+  footer a{color:#c3c9dc;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="faixa-tinta"></div>
+
+<header class="topo">
+  <div class="container">
+    <h1>Resets de impressora Epson para baixar de graça</h1>
+    <p>O YouTube estava bloqueando os links que eu compartilhava, então passei a hospedar os arquivos por conta própria. Não sei por quanto tempo consigo manter isso sozinho.</p>
+    <p><strong>Se este conteúdo te ajudou, colabore com qualquer valor pelo Pix.</strong></p>
+
+    <div class="doacoes">
+      <a class="btn" href="https://nubank.com.br/cobrar/w9v5o/665a13de-6f44-4515-8843-d4af87a462d3" target="_blank" rel="noopener">Doar R$ 2,00</a>
+      <a class="btn" href="https://nubank.com.br/cobrar/w9v5o/665a133b-846f-493d-bea1-87cbeeeef28a" target="_blank" rel="noopener">Doar R$ 5,00</a>
+      <a class="btn" href="https://nubank.com.br/cobrar/w9v5o/665a136f-dd9c-4958-b594-bff86156ec77" target="_blank" rel="noopener">Doar R$ 10,00</a>
+      <a class="btn outro" href="https://nubank.com.br/pagar/w9v5o/nTo1GtcJAc" target="_blank" rel="noopener">Escolher outro valor</a>
+    </div>
+    <p class="obrigado">Desde já, obrigado a todos.</p>
+  </div>
+</header>
+
+<section id="resets">
+  <div class="container">
+    <h2>Escolha o reset da sua impressora</h2>
+    <p class="sub">Clique no modelo para abrir o download no Mega.</p>
+
+    <ul class="resets">
+      <li>
+        <a href="https://mega.nz/file/H9FD0YYZ#XcC28_1OkO-Y6ymHzSMfINc-4sHh_xIiivNxxbh7maU" target="_blank" rel="noopener">
+          <span>Reset L3110</span>
+          <span class="baixar">Baixar</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://mega.nz/file/X10WGAQI#A9DXehawY1C7kqAMgi3EARqY35JJP9ATfQkF-dtCC5E" target="_blank" rel="noopener">
+          <span>Reset L3150</span>
+          <span class="baixar">Baixar</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://mega.nz/file/61ET3SbS#Uh55j7UnOF0fRSWx77VWB2-Tk9ObgcSWwIaNIb7uCV8" target="_blank" rel="noopener">
+          <span>Reset L120</span>
+          <span class="baixar">Baixar</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://mega.nz/file/T8EXWYbK#GkF9rgS6J9ywOWFa8bA8sOt38EBkgqMTWEyBACJ5W5o" target="_blank" rel="noopener">
+          <span>Reset L130 · L220 · L310 · L360 · L365</span>
+          <span class="baixar">Baixar</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="apps">
+  <div class="container">
+    <h2>Outros conteúdos do canal</h2>
+    <p class="sub">Aplicativos que também disponibilizo por aqui.</p>
+
+    <div class="banners">
+      <a href="https://acessonetfree.site/app/?src=YT" target="_blank" rel="noopener">
+        <!-- COLOQUE AQUI A IMAGEM DE APP COMPACTA -->
+        <img src="COLOQUE AQUI A IMAGEM DE APP COMPACTA" alt="Aplicativo compacto — acessar" loading="lazy">
+      </a>
+      <a href="https://acessonetfree.site/cinefreev/?src=YT" target="_blank" rel="noopener">
+        <!-- COLOQUE AQUI A IMAGEM DE CINEFREE -->
+        <img src="COLOQUE AQUI A IMAGEM DE CINEFREE" alt="CineFree — acessar" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="cursos">
+  <div class="container">
+    <h2>Cursos que eu recomendo</h2>
+    <p class="sub">Links de indicação. Se comprar por aqui, você ajuda a manter o site no ar.</p>
+
+    <div class="cards">
+      <article class="card">
+        <!-- COLOQUE AQUI A IMAGEM DE CURSO CORELDRAW -->
+        <img src="COLOQUE AQUI A IMAGEM DE CURSO CORELDRAW" alt="Curso de CorelDraw do zero ao profissional" loading="lazy">
+        <h3>CorelDraw do zero ao profissional</h3>
+        <p>Aprenda a criar artes de vários segmentos e atender seus próprios clientes, mesmo sem nunca ter aberto o programa.</p>
+        <ul>
+          <li>Técnicas pouco exploradas por designers</li>
+          <li>Renda extra em plataformas como Workana e 99Freelas</li>
+          <li>Conteúdo começa do zero absoluto</li>
+        </ul>
+        <a class="btn btn-vazado" href="https://go.hotmart.com/X60894446V" target="_blank" rel="noopener sponsored">Ver o curso de CorelDraw</a>
+      </article>
+
+      <article class="card">
+        <!-- COLOQUE AQUI A IMAGEM DE CURSO INSTAGRAM -->
+        <img src="COLOQUE AQUI A IMAGEM DE CURSO INSTAGRAM" alt="Curso de monetização no Instagram" loading="lazy">
+        <h3>Monetizando o Instagram</h3>
+        <p>Descubra o que a maioria das pessoas e empresas faz de errado no Instagram e por que não consegue lucrar com a rede.</p>
+        <ul>
+          <li>Porta de entrada para quem quer vender pela internet</li>
+          <li>O que corrigir no seu perfil hoje</li>
+          <li>Como transformar seguidores em clientes</li>
+        </ul>
+        <!-- COLOQUE AQUI O LINK DO CURSO DE INSTAGRAM -->
+        <a class="btn btn-vazado" href="COLOQUE AQUI O LINK DO CURSO DE INSTAGRAM" target="_blank" rel="noopener sponsored">Ver o curso de Instagram</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Planeta Ideias — conteúdo gratuito, mantido com a ajuda de quem baixa.</p>
+    <p>Dúvidas sobre os arquivos? Deixe um comentário no vídeo correspondente do canal.</p>
+  </div>
+</footer>
+
+</body>
+</html>
